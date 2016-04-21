@@ -748,6 +748,10 @@ body {
 	height: calc(100vh - 100px);
 }
 
+.mainbox-1, .mainbox-2, .mainbox-3, .mainbox-t {
+	overflow-y: scroll;
+}
+
 /* DropDown Styles */
 
 .drop-down {
