@@ -692,66 +692,6 @@ body {
 	display: none;
 }
 
-/*   WebSite Styles   */ 
-
-/*   
-	Leftbar or Rightbar are to be coded first/before Mainbox in HTML.
-	Same for Topbox. mainbox 1-3 is paired for left or right box classes and 
-	mainbox-t is paired fot topbox.
-*/
-
-.topbar {
-	height: 100px;
-	width: 100%;
-}
-
-.leftbox-1 {
-	float: left;
-	width: 100px;
-}
-.leftbox-2 {
-	float: left;
-	width: 150px;
-}
-.leftbox-3 {
-	float: left;
-	width: 200px;
-}
-
-.rightbox-1 {
-	float: right;
-	width: 100px;
-}
-.rightbox-2 {
-	float: right;
-	width: 150px;
-}
-.rightbox-3 {
-	float: right;
-	width: 200px;
-}
-
-.mainbox-1 {
-	width: calc(100% - 100px);
-	height: 100vh;
-}
-.mainbox-2 {
-	width: calc(100% - 150px);
-	height: 100vh;
-}
-.mainbox-3 {
-	width: calc(100% - 200px);
-	height: 100vh;
-}
-.mainbox-t {
-	width: 100%;
-	height: calc(100vh - 100px);
-}
-
-.mainbox-1, .mainbox-2, .mainbox-3, .mainbox-t {
-	overflow-y: scroll;
-}
-
 /* DropDown Styles */
 
 .drop-down {
