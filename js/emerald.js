@@ -16,7 +16,13 @@ $(document).ready(function(){
 
 // Shuffle Array
 function shuffleArray(array) {
-    if( array == undefined ) { return; }
+    var input = $.type(array);
+    
+    if( array == undefined || input != "array" ) { 
+    	console.log("Error - Input Is Either Empty Or Not An Array Object."); 
+    	return;
+    }
+    
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = array[i];
