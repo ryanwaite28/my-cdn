@@ -44,6 +44,16 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+function flash_msg(id, msg) {
+  if(id == undefined) {throw new Error('element id was not given');}
+  if(msg == undefined) {throw new Error('msg was not given');}
+  document.getElementById(id).innerHTML = msg;
+
+  setTimeout(function(){
+    document.getElementById(id).innerHTML = '';
+  } , 3000);
+}
+
 String.prototype.capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 };
