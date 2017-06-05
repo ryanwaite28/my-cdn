@@ -54,6 +54,30 @@ function flash_msg(id, msg) {
   } , 3000);
 }
 
+Date.prototype.addDays = function(days) {
+			var dat = new Date(this.valueOf())
+			dat.setDate(dat.getDate() + days);
+			return dat;
+		}
+
+		Date.prototype.backDays = function(days) {
+			var dat = new Date(this.valueOf())
+			dat.setDate(dat.getDate() - days);
+			return dat;
+		}
+
+		function getDates(startDate, stopDate) {
+			var dateArray = [];
+			var currentDate = startDate;
+			while (currentDate <= stopDate) {
+				dateArray.push(new Date(currentDate))
+				currentDate = currentDate.addDays(1);
+			}
+			// console.log(dateArray);
+			return dateArray;
+		}
+
+
 String.prototype.capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 };
