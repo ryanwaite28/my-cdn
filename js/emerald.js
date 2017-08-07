@@ -12,7 +12,25 @@ $(document).ready(function(){
 		});
 	})
 	
+	$('.bta').click(function(){
+        	$('html, body').animate({
+            		scrollTop: 0 // $("#sdl").offset().top
+        	}, 1000);
+    	});
+	
 })
+
+Date.prototype.addDays = function (number_of_days) {
+   var dat = new Date(this.valueOf())
+   dat.setDate(dat.getDate() + number_of_days);
+   return dat;
+}
+
+Date.prototype.backDays = function (number_of_days) {
+   var dat = new Date(this.valueOf())
+   dat.setDate(dat.getDate() - number_of_days);
+   return dat;
+}
 
 // Shuffle Array
 function shuffleArray(array) {
@@ -54,17 +72,6 @@ function flash_msg(id, msg) {
   } , 3000);
 }
 
-Date.prototype.addDays = function(days) {
-			var dat = new Date(this.valueOf())
-			dat.setDate(dat.getDate() + days);
-			return dat;
-		}
-
-		Date.prototype.backDays = function(days) {
-			var dat = new Date(this.valueOf())
-			dat.setDate(dat.getDate() - days);
-			return dat;
-		}
 
 		function getDates(startDate, stopDate) {
 			var dateArray = [];
