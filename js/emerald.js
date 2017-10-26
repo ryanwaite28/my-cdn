@@ -88,3 +88,29 @@ function flash_msg(id, msg) {
 String.prototype.capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 };
+
+function getFileContents(file) {
+        return new Promise((res) => {
+          var reader  = new FileReader();
+
+          reader.addEventListener("load", () => {
+            res(reader.result);
+          }, false);
+
+          if (file) {
+            reader.readAsDataURL(file);
+          }
+        });
+      }
+
+function randomValue(){
+  return Math.random().toString(36).substr(2, 34);
+}
+
+function randomValueLong(){
+  return Math.random().toString(36).substr(2, 34) + Math.random().toString(36).substr(2, 34);
+}
+
+function string_insert(str, index, value) {
+    return str.substr(0, index) + value + str.substr(index);
+}
