@@ -114,3 +114,39 @@ function randomValueLong(){
 function string_insert(str, index, value) {
     return str.substr(0, index) + value + str.substr(index);
 }
+
+function file_is_image_type(file) {
+
+    // Make sure `file.name` matches our extensions criteria
+    if ( /\.(jpeg|png|jpg)$/i.test(file.name) ) {
+      return true
+    }
+	else {
+		return false;
+	}
+
+  }
+
+function file_is_music_type(file) {
+
+    // Make sure `file.name` matches our extensions criteria
+    if ( /\.(mp3|wav)$/i.test(file.name) ) {
+      return true
+    }
+	else {
+		return false;
+	}
+
+  }
+
+function file_is_video_type(file) {
+
+    // Make sure `file.name` matches our extensions criteria
+    if ( /\.mp4$/i.test(file.name) ) {
+      return true
+    }
+	else {
+		return false;
+	}
+
+  }
