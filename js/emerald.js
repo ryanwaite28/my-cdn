@@ -48,6 +48,14 @@ function GeturlParams() {
        urlParams[decode(match[1])] = decode(match[2]);
 }
 
+// got from: https://davidwalsh.name/query-string-javascript
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
 Date.prototype.addDays = function (number_of_days) {
    var dat = new Date(this.valueOf())
    dat.setDate(dat.getDate() + number_of_days);
