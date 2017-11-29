@@ -35,6 +35,19 @@ var parseQueryString = function() {
     return objURL;
 };
 
+// got from: https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+function GeturlParams() {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+}
+
 Date.prototype.addDays = function (number_of_days) {
    var dat = new Date(this.valueOf())
    dat.setDate(dat.getDate() + number_of_days);
