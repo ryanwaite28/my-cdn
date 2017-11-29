@@ -107,6 +107,22 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+function get_xml(link) {
+  return new Promise((resolve, reject) => {
+    fetch(link)
+    .then(resp => {
+      if(resp.status == 503){
+        reject("No Results Matches Your Search");
+        return;
+      }
+      resp.text();
+    })
+    .then(xmlString => { jQuery ? $.parseXML(xmlString) : (new window.DOMParser()).parseFromString(str, "text/xml")})
+    .then(xml => resolve(xml))
+    .catch(e => { console.log(e); reject("Error Fetching..."); })
+  });
+}
+
 function flash_msg(id, msg) {
   if(id == undefined) {throw new Error('element id was not given');}
   if(msg == undefined) {throw new Error('msg was not given');}
