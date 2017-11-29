@@ -20,6 +20,7 @@ $(document).ready(function(){
 	
 })
 
+// got from: https://stackoverflow.com/questions/523266/how-can-i-get-a-specific-parameter-from-location-search
 var parseQueryString = function() {
 
     var str = window.location.search;
