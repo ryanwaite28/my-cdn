@@ -150,6 +150,10 @@ String.prototype.capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 };
 
+function scrollToBottom() {
+  window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+}
+
 function getFileContents(file) {
         return new Promise((res) => {
           var reader  = new FileReader();
