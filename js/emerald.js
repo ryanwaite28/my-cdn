@@ -65,6 +65,19 @@ function getQueryVariable(variable) {
 	return false;
 }
 
+// i made this
+function get_url_params() {
+	var query = {};
+	var params = location.search.substr(1).split("&");
+	params.forEach(param => {
+  		var splitter = param.split("=");
+  		var key = splitter[0];
+  		var value = splitter[1];
+  		query[key] = value;
+	});
+	return query;
+}
+
 Date.prototype.addDays = function (number_of_days) {
    var dat = new Date(this.valueOf())
    dat.setDate(dat.getDate() + number_of_days);
