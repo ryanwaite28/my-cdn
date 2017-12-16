@@ -228,3 +228,23 @@ function file_is_video_type(file) {
 	}
 
   }
+
+var numLetters = function(input) {
+    if(!input) { alert("Input is required"); return; }
+    if(typeof(input) !== "string") { alert("Input must be of type: string"); return; }
+    var letter = input;
+    return function(multiplier) {
+        if(!multiplier) { alert("multiplier is required"); return; }
+        if(typeof(multiplier) !== "number") { alert("Input must be of type: number"); return; }
+        let multi = Math.floor(multiplier);
+        var value = "";
+        while(multi > 0) {
+            value = value + letter
+            multi--;
+        }
+         
+        console.log("value:", value)
+        console.log("length:", value.length)
+        return value; 
+    }
+}
