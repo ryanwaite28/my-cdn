@@ -189,6 +189,13 @@ function randomValueLong(){
   return Math.random().toString(36).substr(2, 34) + Math.random().toString(36).substr(2, 34);
 }
 
+function uniqueValue() {
+    return String(Date.now()) + 
+	    Math.random().toString(36).substr(2, 34) +
+	    Math.random().toString(36).substr(2, 34) +
+	    Math.random().toString(36).substr(2, 34)
+}
+
 function string_insert(str, index, value) {
     return str.substr(0, index) + value + str.substr(index);
 }
