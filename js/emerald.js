@@ -1,24 +1,15 @@
-$(document).ready(function(){
-	
-	var thCenter = $('.th-center');
-	
-	thCenter.css({
-		'line-height': thCenter.parent('div').height() + 'px',
-	});
-	
-	$(window).resize(function(){
-		thCenter.css({
-			'line-height': thCenter.parent('div').height() + 'px',
-		});
-	})
-	
-	$('.bta').click(function(){
-        	$('html, body').animate({
+function backToTop(){
+	$('html, body').animate({
             		scrollTop: 0 // $("#sdl").offset().top
         	}, 1000);
-    	});
-	
-})
+}
+
+function headers_one() {
+  let myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  return myHeaders;
+}
 
 // got from: https://stackoverflow.com/questions/523266/how-can-i-get-a-specific-parameter-from-location-search
 var parseQueryString = function() {
