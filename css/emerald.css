@@ -8,6 +8,17 @@
 
 /*   All   */
 
+hr.clean {
+        height: 0;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 0;
+        border-top: 1px solid #eee;
+      }
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
