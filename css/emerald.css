@@ -68,6 +68,22 @@ hr.clean {
   transform: translateX(-1684px);
 }
 
+.sliding {
+    -moz-transition: opacity 0.5s ease-out;
+    -o-transition: opacity 0.5s ease-out;
+    -webkit-transition: opacity 0.5s ease-out;
+    -ms-transition: opacity 0.5s ease-out;
+    -webkit-animation: moveSlideshow 60s linear infinite;
+    -moz-animation: moveSlideshow 60s linear infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translateX(0);
+    -webkit-transform: translateX(-1684px);
+    -moz-transform: translateX(-1684px);
+    -ms-transform: translateX(-1684px);
+    -o-transform: translateX(-1684px);
+    transform: translateX(-1684px);
+}
+
 body {
 	margin: 0px;
 	font-family: Verdana;
