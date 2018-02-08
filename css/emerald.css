@@ -99,6 +99,39 @@ hr.clean {
 	transform: translateX(-1684px);
 }
 
+@-webkit-keyframes moveSlideshow {
+    0% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-1684px);
+        -moz-transform: translateX(-1684px);
+        -ms-transform: translateX(-1684px);
+        -o-transform: translateX(-1684px);
+        transform: translateX(-1684px);
+    }
+}
+@-moz-keyframes moveSlideshow {
+    0% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-1684px);
+        -moz-transform: translateX(-1684px);
+        -ms-transform: translateX(-1684px);
+        -o-transform: translateX(-1684px);
+        transform: translateX(-1684px);
+    }
+}
+
 body {
 	margin: 0px;
 	font-family: Verdana;
