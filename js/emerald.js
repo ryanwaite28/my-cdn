@@ -4,6 +4,21 @@ function backToTop(){
         	}, 1000);
 }
 
+const makeObjPropName = (str) => {
+  return str
+    .replace(/[^a-z0-9\s]/gi, '')
+    .replace(/[\s]+/gi, ' ')
+    .split(' ')
+    .map(w => w.toLowerCase())
+    .map((word, index) => index === 0 ? word : (word.charAt(0).toUpperCase() + word.substr(1)))
+    .join('');
+};
+function makeFileNameSafe(fileName, makeLower = false) {
+  const badCharacters = /[^a-z0-9\-]/gi;
+  const formatted = fileName.replace(/\s/gi, '-').replace(badCharacters, '_');
+  return makeLower ? formatted.toLowerCase() : formatted;
+}
+
 function headers_one() {
   let myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
